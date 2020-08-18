@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using DatingApp.API.Dtos;
 using DatingApp.API.Models;
-using DatingApp.API.Models.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using DatingApp.API.Models.Data;
 
 namespace DatingApp.API.Controllers
 {
@@ -55,7 +55,7 @@ namespace DatingApp.API.Controllers
 
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, userFromRepo.ID.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
                 new Claim(ClaimTypes.Name, userFromRepo.Username)
             };
 
